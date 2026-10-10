@@ -373,54 +373,6 @@
 			//	Console.WriteLine(name);
 
 			#endregion
-
-			#region Quantifiers Operators only in Method Syntax
-			//// Quantifiers answer a yes/no question about the sequence → they return bool.
-			//// Immediate execution (they return a value, not a query).
-			//// Method syntax ONLY — no query syntax keywords.
-
-			//// ===== Any =====
-			//// Any(): is there at least ONE element? (is the sequence not empty?)
-			//bool hasProducts = ProductList.Any();
-			//Console.WriteLine($"Has products: {hasProducts}");
-			//// Prefer Any() over Count() > 0 — Any stops at the first element, Count goes through all of them
-
-			//// Any(predicate): does at least ONE element satisfy the condition?
-			//// Stops at the first match.
-			//bool anyOutOfStock = ProductList.Any(p => p.UnitsInStock == 0);
-			//Console.WriteLine($"Any out of stock: {anyOutOfStock}");
-
-			//// ===== All =====
-			//// All(predicate): do ALL elements satisfy the condition?
-			//// Stops at the first element that fails.
-
-			//// Are all Seafood products in stock?
-			//bool allInStock = ProductList
-			//				  .Where(p => p.Category == "Seafood")
-			//				  .All(p => p.UnitsInStock > 0);
-			//Console.WriteLine($"All seafood in stock: {allInStock}");
-
-			//// Watch out: All returns TRUE on an empty sequence (no element fails the condition)
-			//bool allOnEmpty = ProductList
-			//				  .Where(p => p.Category == "NoSuchCategory")
-			//				  .All(p => p.UnitsInStock > 0);
-			//Console.WriteLine($"All on empty: {allOnEmpty}");               // True
-
-			//// ===== Contains =====
-			//// Contains(value): does the sequence contain this specific element?
-			//// Uses Equals for comparison: by value for int/string,
-			//// by REFERENCE for classes (unless Equals is overridden or a comparer is passed).
-			//int[] nums = { 2, 3, 4, 5 };
-			//Console.WriteLine($"Contains(4): {nums.Contains(4)}");          // True
-			//Console.WriteLine($"Contains(9): {nums.Contains(9)}");          // False
-
-			//// Contains(value, comparer): control how elements are compared
-			//string[] fruits = { "Apple", "Banana", "Cherry" };
-
-			//Console.WriteLine(fruits.Contains("cherry"));                                       // False — case-sensitive
-			//Console.WriteLine(fruits.Contains("cherry", StringComparer.OrdinalIgnoreCase));     // True
-
-			#endregion
 		}
 	}
 }
